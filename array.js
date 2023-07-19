@@ -15,15 +15,10 @@ sala.push(new Aluno("Alana", 5));
 sala.push(new Aluno("Betânia", 3));
 sala.push(new Aluno("Tereza", 10));
 
-
-
-function media() {
-
-    for (let i = 0; i < sala.length; i++){
-        if (sala[i].nota >= 6) {
-            console.log(`A nota de ${sala[i].nome} é ${sala[i].nota}`);
-        } 
-    }
+function filtraAlunosNaMedia(aluno) {
+    return aluno.nota >= 6;
 }
 
-media();
+const alunosNaMedia = sala.filter(filtraAlunosNaMedia);
+
+console.log(alunosNaMedia);
